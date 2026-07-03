@@ -12,38 +12,34 @@ export default function HowItWorks() {
   const locale = useLocale();
 
   return (
-    <section className="section bg-cream">
+    <section className="section-pad bg-primary text-on-dark">
       <div className="container-xl">
 
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-16">
           <div>
-            <p className="label mb-4">{t("title")}</p>
-            <h2 className="text-[clamp(2rem,3.5vw,3rem)] font-black text-ink leading-tight max-w-[16ch]">
-              Simple. Structured. Effective.
+            <p className="text-[11px] font-bold uppercase tracking-[0.14em] text-white/40 mb-4">
+              {t("title")}
+            </p>
+            <h2 className="text-[clamp(2rem,3.5vw,3.2rem)] font-black text-on-dark leading-tight">
+              Three steps.<br/>Real results.
             </h2>
           </div>
-          <Link href={`/${locale}/contact`} className="btn-primary self-start md:self-end">
-            Book free session <span aria-hidden>→</span>
+          <Link href={`/${locale}/contact`} className="btn-gold self-start md:self-end">
+            Start free →
           </Link>
         </div>
 
-        {/* Steps — horizontal rule style */}
-        <div className="grid md:grid-cols-3 gap-8 relative">
-          {/* Connector line */}
-          <div className="hidden md:block absolute top-6 left-[calc(16.7%+1rem)] right-[calc(16.7%+1rem)] h-px bg-border" />
-
+        <div className="grid md:grid-cols-3 gap-6">
           {steps.map((step, idx) => (
-            <div key={idx} className="relative">
-              {/* Step number bubble */}
-              <div className="flex items-center gap-4 mb-6">
-                <div className={`w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0 font-black text-sm relative z-10 ${
-                  idx === 1 ? "bg-primary text-ink-inv" : "bg-cream border-2 border-border text-muted"
-                }`}>
-                  {step.num}
-                </div>
-              </div>
-              <h3 className="font-bold text-ink mb-2 text-base">{t(step.titleKey)}</h3>
-              <p className="text-sm text-muted leading-relaxed">{t(step.descKey)}</p>
+            <div key={idx}
+              className={`rounded-2xl p-8 ${
+                idx === 1
+                  ? "bg-white/10 ring-1 ring-white/20"
+                  : "bg-white/5"
+              }`}>
+              <p className="text-5xl font-black text-white/15 mb-6 leading-none">{step.num}</p>
+              <h3 className="font-bold text-on-dark text-base mb-3">{t(step.titleKey)}</h3>
+              <p className="text-sm text-white/55 leading-relaxed">{t(step.descKey)}</p>
             </div>
           ))}
         </div>

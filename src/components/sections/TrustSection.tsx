@@ -1,22 +1,18 @@
-import { useTranslations } from "next-intl";
-
-const stats = [
-  { value:"500+",  key:"students" },
-  { value:"CELTA", key:"certified" },
-  { value:"10+",   key:"experience" },
-  { value:"4.9 ★", key:"rating" },
-];
-
 export default function TrustSection() {
-  const t = useTranslations("trust");
+  const items = [
+    { val:"500+",  lab:"Professionals coached" },
+    { val:"95%",   lab:"Student satisfaction" },
+    { val:"3",     lab:"Languages of instruction" },
+    { val:"12+",   lab:"Countries represented" },
+  ];
   return (
-    <section className="bg-primary">
+    <section className="bg-cream-dark border-y border-border">
       <div className="container-xl">
-        <div className="grid grid-cols-2 md:grid-cols-4 divide-x divide-white/10">
-          {stats.map((s, i) => (
-            <div key={s.key} className={`py-10 px-8 ${i === 0 ? "" : ""}`}>
-              <p className="text-3xl font-black text-ink-inv mb-1">{s.value}</p>
-              <p className="text-xs text-white/50 uppercase tracking-widest">{t(s.key)}</p>
+        <div className="grid grid-cols-2 md:grid-cols-4 divide-x divide-border">
+          {items.map(({ val, lab }) => (
+            <div key={lab} className="py-10 px-6 sm:px-10">
+              <p className="text-4xl sm:text-5xl font-black text-ink mb-1.5">{val}</p>
+              <p className="text-xs text-muted">{lab}</p>
             </div>
           ))}
         </div>

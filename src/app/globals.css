@@ -4,30 +4,27 @@
 
 @layer base {
   html { scroll-behavior: smooth; }
-
-  body {
-    @apply antialiased bg-cream text-ink;
-    font-family: "Inter", system-ui, sans-serif;
-  }
-
-  h1,h2,h3,h4 { letter-spacing: -0.025em; }
+  body { @apply antialiased bg-cream text-ink; font-family: "Inter", system-ui, sans-serif; }
+  h1,h2,h3 { letter-spacing: -0.025em; font-weight: 800; }
 }
 
 @layer components {
-  .label {
-    @apply text-xs font-bold uppercase tracking-[0.12em] text-muted;
-  }
-  .btn-primary {
-    @apply inline-flex items-center gap-2 bg-primary text-ink-inv
+  .eyebrow { @apply text-[11px] font-bold uppercase tracking-[0.14em] text-muted; }
+  .container-xl { @apply max-w-6xl mx-auto px-5 sm:px-8; }
+  .section-pad { @apply py-20 sm:py-28; }
+  .btn-dark {
+    @apply inline-flex items-center gap-2 bg-ink text-on-dark
            px-6 py-3.5 rounded-xl text-sm font-semibold
-           hover:bg-[#003520] transition-colors;
+           hover:bg-ink-soft transition-colors;
   }
-  .btn-outline {
-    @apply inline-flex items-center gap-2 border border-primary text-primary
+  .btn-gold {
+    @apply inline-flex items-center gap-2 bg-gold text-ink
+           px-6 py-3.5 rounded-xl text-sm font-bold
+           hover:bg-gold-light transition-colors;
+  }
+  .btn-outline-light {
+    @apply inline-flex items-center gap-2 border border-on-dark/30 text-on-dark
            px-6 py-3.5 rounded-xl text-sm font-semibold
-           hover:bg-primary/5 transition-colors;
+           hover:bg-on-dark/10 transition-colors;
   }
-  .section { @apply py-section px-4; }
-  .container-xl { @apply max-w-6xl mx-auto; }
-  .divider { @apply w-10 h-0.5 bg-gold mb-8; }
 }

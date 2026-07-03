@@ -9,22 +9,20 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        primary:  "#004225",
-        gold:     "#C9A96E",
-        cream:    "#F7F5F0",
-        ink:      "#111111",
-        muted:    "#6B6A63",
-        border:   "#E2DFD8",
-        "ink-inv":"#F7F5F0",
+        primary:   "#004225",
+        "primary-light": "#005530",
+        gold:      "#C9A96E",
+        "gold-light": "#D9BC8E",
+        cream:     "#F7F5F0",
+        "cream-dark": "#EDE8DF",
+        ink:       "#111111",
+        "ink-soft":"#2D2D2D",
+        muted:     "#6B6960",
+        border:    "#DDD9D0",
+        "on-dark": "#F7F5F0",
       },
       fontFamily: {
-        sans: ["Inter","system-ui","sans-serif"],
-      },
-      spacing: {
-        "section": "7rem",
-      },
-      maxWidth: {
-        "prose-xl": "72ch",
+        sans: ["Inter", "system-ui", "sans-serif"],
       },
     },
   },
