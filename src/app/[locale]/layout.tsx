@@ -2,17 +2,16 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "../globals.css";
 import { NextIntlClientProvider } from "next-intl";
-import { getMessages } from "next-intl/server";
+import { getMessages, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
+import { routing } from "@/i18n/routing";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 
 const inter = Inter({ subsets: ["latin", "cyrillic"] });
 
-const locales = ["en", "fr", "ru"];
-
 export function generateStaticParams() {
-  return locales.map((locale) => ({ locale }));
+  return routing.locales.map((locale) => ({ locale }));
 }
 
 export async function generateMetadata({
@@ -21,6 +20,7 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
   const { locale } = await params;
+
   const titles: Record<string, string> = {
     en: "English for Future Leaders | Professional English Coaching",
     fr: "Anglais pour Les Leaders de Demain | Coaching Anglais Professionnel",
@@ -39,11 +39,7 @@ export async function generateMetadata({
     metadataBase: new URL("https://myeffl.com"),
     alternates: {
       canonical: `/${locale}`,
-      languages: {
-        "en": "/en",
-        "fr": "/fr",
-        "ru": "/ru",
-      },
+      languages: { en: "/en", fr: "/fr", ru: "/ru" },
     },
     openGraph: {
       title: titles[locale] || titles.en,
@@ -64,9 +60,12 @@ export default async function LocaleLayout({
   params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
-  if (!locales.includes(locale)) {
+
+  if (!routing.locales.includes(locale as "en" | "fr" | "ru")) {
     notFound();
   }
+
+  setRequestLocale(locale);
 
   const messages = await getMessages();
 
