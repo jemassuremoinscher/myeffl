@@ -8,6 +8,7 @@ import { routing } from "@/i18n/routing";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import StructuredData from "@/components/layout/StructuredData";
+import Analytics from "@/components/layout/Analytics";
 
 const inter = Inter({ subsets: ["latin", "cyrillic"] });
 
@@ -66,6 +67,7 @@ export default async function LocaleLayout({ children, params }: { children: Rea
     <html lang={locale} dir="ltr" className="scroll-smooth">
       <head>
         <StructuredData data={orgSchema} />
+        <Analytics />
       </head>
       <body className={`${inter.className} overflow-x-hidden`}>
         <NextIntlClientProvider messages={messages}>

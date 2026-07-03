@@ -67,7 +67,7 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
             <div className="grid lg:grid-cols-2 gap-16 items-start">
               <div className="relative">
                 <div className="rounded-2xl overflow-hidden aspect-[4/5] max-w-sm mx-auto lg:mx-0 relative bg-primary shadow-xl">
-                  <Image src="/kate.jpg" alt="Katsiaryna — English Coach" fill className="object-cover object-top"/>
+                  <Image src="/kate.jpg" alt="Katsiaryna — English Coach" fill className="object-cover object-[center_15%]"/>
                   <div className="absolute inset-0 bg-gradient-to-t from-ink/70 via-transparent to-transparent"/>
                   <div className="absolute bottom-0 left-0 right-0 px-6 py-5">
                     <p className="text-[10px] text-white/45 uppercase tracking-widest mb-1">Your coach</p>

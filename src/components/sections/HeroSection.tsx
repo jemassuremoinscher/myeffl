@@ -59,7 +59,7 @@ export default function HeroSection() {
                 src="/kate.jpg"
                 alt="Katsiaryna — English Coach"
                 fill
-                className="object-cover object-top"
+                className="object-cover object-[center_15%]"
                 priority
               />
 
