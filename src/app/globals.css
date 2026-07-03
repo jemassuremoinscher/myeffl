@@ -28,3 +28,9 @@
            hover:bg-on-dark/10 transition-colors;
   }
 }
+
+/* Prevent long Cyrillic strings from overflowing */
+@layer base {
+  body { overflow-wrap: break-word; word-break: break-word; }
+  .container-xl { overflow-x: hidden; }
+}

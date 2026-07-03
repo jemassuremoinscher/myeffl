@@ -16,9 +16,7 @@ export function generateStaticParams() {
 
 export async function generateMetadata({
   params,
-}: {
-  params: Promise<{ locale: string }>;
-}): Promise<Metadata> {
+}: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
 
   const titles: Record<string, string> = {
@@ -26,11 +24,10 @@ export async function generateMetadata({
     fr: "Anglais pour Les Leaders de Demain | Coaching Anglais Professionnel",
     ru: "Английский для Лидеров Будущего | Профессиональный коучинг",
   };
-
   const descriptions: Record<string, string> = {
-    en: "Expert 1-on-1 English coaching for intermediate+ Russian speakers. Transform your professional communication. Based in Dubai, teaching worldwide.",
-    fr: "Coaching anglais expert pour russophones intermédiaires+. Transformez votre communication professionnelle. Basée à Dubaï, cours dans le monde entier.",
-    ru: "Экспертный коучинг по английскому для русскоговорящих среднего уровня+. Трансформируйте профессиональную коммуникацию. Дубай, преподаю по всему миру.",
+    en: "Expert 1-on-1 English coaching for Russian-speaking professionals. Based in Dubai, teaching worldwide.",
+    fr: "Coaching anglais expert pour russophones professionnels. Basée à Dubaï, cours dans le monde entier.",
+    ru: "Экспертный коучинг по английскому для русскоговорящих профессионалов. Дубай, онлайн по всему миру.",
   };
 
   return {
@@ -46,7 +43,7 @@ export async function generateMetadata({
       description: descriptions[locale] || descriptions.en,
       url: `https://myeffl.com/${locale}`,
       siteName: "English for Future Leaders",
-      locale: locale,
+      locale,
       type: "website",
     },
   };
@@ -55,10 +52,7 @@ export async function generateMetadata({
 export default async function LocaleLayout({
   children,
   params,
-}: {
-  children: React.ReactNode;
-  params: Promise<{ locale: string }>;
-}) {
+}: { children: React.ReactNode; params: Promise<{ locale: string }> }) {
   const { locale } = await params;
 
   if (!routing.locales.includes(locale as "en" | "fr" | "ru")) {
@@ -66,12 +60,11 @@ export default async function LocaleLayout({
   }
 
   setRequestLocale(locale);
-
   const messages = await getMessages();
 
   return (
-    <html lang={locale} className="scroll-smooth">
-      <body className={inter.className}>
+    <html lang={locale} dir="ltr" className="scroll-smooth">
+      <body className={`${inter.className} overflow-x-hidden`}>
         <NextIntlClientProvider messages={messages}>
           <Navbar />
           <main>{children}</main>

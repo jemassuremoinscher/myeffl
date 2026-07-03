@@ -57,7 +57,7 @@ export default function HeroSection() {
               {/* Photo de Kate */}
               <Image
                 src="/kate.jpg"
-                alt="Kate — English Coach"
+                alt="Katsiaryna — English Coach"
                 fill
                 className="object-cover object-top"
                 priority
@@ -69,7 +69,7 @@ export default function HeroSection() {
               {/* Credential strip */}
               <div className="absolute bottom-0 left-0 right-0 px-6 py-5 z-10">
                 <p className="text-[10px] text-white/45 uppercase tracking-widest mb-1">Your coach</p>
-                <p className="text-on-dark font-bold text-sm">Kate · CELTA Certified · 10+ years</p>
+                <p className="text-on-dark font-bold text-sm">Katsiaryna · CELTA Certified · 10+ years</p>
                 <p className="text-white/50 text-xs mt-0.5">🇷🇺 Russian · 🇬🇧 English · 🇫🇷 French</p>
               </div>
             </div>
