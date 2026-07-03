@@ -2,64 +2,62 @@
   "nav": {
     "home": "Accueil",
     "packages": "Forfaits",
-    "about": "À Propos",
+    "about": "À propos",
     "blog": "Blog",
     "resources": "Ressources",
     "contact": "Contact",
-    "book": "Réserver"
+    "book": "Réserver gratuitement"
   },
   "hero": {
-    "title": "Maîtrisez l'Anglais Professionnel.",
-    "title2": "Maîtrisez Votre Avenir.",
-    "subtitle": "Coaching spécialisé pour russophones intermédiaires+ préparant un rôle de leader mondial",
-    "cta": "Commencer",
-    "cta_secondary": "Voir les Forfaits"
+    "title": "Maîtrisez l'anglais professionnel.",
+    "title2": "Devenez un leader mondial.",
+    "subtitle": "Coaching individuel expert pour les professionnels russophones de niveau intermédiaire et supérieur, prêts à communiquer avec confiance sur la scène internationale.",
+    "cta": "Réserver un appel découverte gratuit",
+    "cta_secondary": "Voir les forfaits"
   },
   "trust": {
-    "students": "Étudiants Formés",
+    "students": "Professionnels coachés",
     "certified": "Certifiée CELTA",
-    "experience": "Ans Corporatif",
-    "rating": "Étoiles"
+    "experience": "Ans d'expérience corporate",
+    "rating": "Étoiles de satisfaction"
   },
   "how": {
-    "title": "Comment Ça Marche",
-    "step1_title": "Réservez une Séance",
-    "step1_desc": "Réservation simple en 3 minutes. Choisissez votre créneau.",
-    "step2_title": "Évaluation + Plan",
-    "step2_desc": "On évalue votre niveau et crée un plan personnalisé.",
-    "step3_title": "Commencez la Transformation",
-    "step3_desc": "Séances hebdomadaires, feedback réel, progrès mesurables.",
-    "step4_title": "Voyez les Résultats",
-    "step4_desc": "Confiance, fluidité, transformation professionnelle."
+    "title": "Comment ça marche",
+    "step1_title": "Un appel découverte gratuit",
+    "step1_desc": "20 minutes pour comprendre vos objectifs, votre niveau actuel et votre contexte professionnel. Sans engagement.",
+    "step2_title": "Évaluation et plan personnalisé",
+    "step2_desc": "Katsiaryna évalue votre niveau, identifie vos lacunes spécifiques et construit un plan structuré autour de votre rôle et vos objectifs.",
+    "step3_title": "Séances hebdomadaires. Progrès réels.",
+    "step3_desc": "Séances de 50 minutes sur vos besoins concrets : présentations, négociations, emails ou leadership. Progrès mesurés chaque mois."
   },
   "packages": {
-    "title": "Votre Chemin d'Apprentissage",
-    "subtitle": "Prix clairs. Aucun frais caché. Flexible et orienté résultats.",
+    "title": "Choisissez votre parcours",
+    "subtitle": "Prix transparents. Aucun frais caché. Conçu pour les professionnels occupés.",
     "popular": "LE PLUS POPULAIRE",
     "cta": "Commencer",
     "discovery": {
       "name": "Découverte",
       "price": "49€",
-      "desc": "Parfait pour tester la compatibilité",
+      "desc": "Testez l'approche avant de vous engager",
       "sessions": "2 × 50 min",
-      "feature1": "Évaluation du niveau",
-      "feature2": "Plan personnalisé 3 mois",
-      "feature3": "Mini-séance de suivi"
+      "feature1": "Évaluation complète du niveau",
+      "feature2": "Feuille de route personnalisée sur 3 mois",
+      "feature3": "Enregistrement + retour écrit"
     },
     "regular": {
       "name": "Régulier",
       "price": "100€",
-      "desc": "Idéal pour une progression constante",
+      "desc": "Progrès stables et structurés",
       "sessions": "5 × 50 min",
-      "feature1": "Planning flexible",
-      "feature2": "Matériels professionnels",
-      "feature3": "Feedback écrit après chaque séance"
+      "feature1": "Planning flexible (préavis 48h)",
+      "feature2": "Matériel sur mesure par séance",
+      "feature3": "Retour écrit + liste de vocabulaire"
     },
     "group": {
       "name": "Groupe",
       "price": "60€",
       "desc": "Apprentissage collaboratif en petit groupe",
-      "sessions": "5 × 50 min groupe (6-8 pers.)",
+      "sessions": "5 × 50 min (max 6)",
       "feature1": "Environnement collaboratif",
       "feature2": "Ressources partagées",
       "feature3": "Séances live hebdomadaires"
@@ -67,62 +65,84 @@
     "intensive": {
       "name": "Intensif",
       "price": "300€",
-      "desc": "Transformation profonde en 4 semaines",
+      "desc": "Transformation complète en 4 semaines",
       "sessions": "10 × 50 min",
-      "feature1": "Planning intensif hebdomadaire",
-      "feature2": "Curriculum entièrement personnalisé",
-      "feature3": "Réservation prioritaire + support"
+      "feature1": "Planning prioritaire + enregistrements",
+      "feature2": "Programme entièrement sur mesure",
+      "feature3": "Support WhatsApp illimité"
     }
   },
   "about": {
-    "title": "Rencontrez Votre Coach",
-    "subtitle": "Éducatrice bilingue. Native russe. Experte anglais.",
-    "bio": "Locutrice native du russe, je suis devenue couramment bilingue en anglais et français. Depuis 10+ ans, j'ai coaché 500+ professionnels — des fondateurs de startup aux cadres dirigeants — pour transformer leur communication professionnelle et ouvrir les portes mondiales.",
-    "bio2": "Je n'enseigne pas juste l'anglais. J'enseigne la confiance et l'intelligence culturelle qui ouvrent les portes.",
-    "creds": "Certifiée CELTA • 10+ Ans Formation Corporative • 500+ Professionnels Coachés",
-    "location": "Basée à Dubaï • Cours dans le monde entier",
-    "feature1": "Sessions personnalisées 1-on-1",
-    "feature2": "Petits groupes (6-8 max)",
-    "feature3": "Matériels professionnels & feedback",
-    "cta": "Réserver un appel découverte"
+    "title": "Votre coach",
+    "subtitle": "Professionnelle bilingue. Expérience internationale. Résultats concrets.",
+    "bio": "Katsiaryna est une native russophone qui a construit sa carrière dans le marketing international dans la région MEA avant de se consacrer entièrement au coaching. Ayant elle-même navigué dans des environnements corporatifs complexes en anglais, elle comprend exactement ce dont les professionnels russophones ont besoin pour réussir sur la scène mondiale.",
+    "bio2": "Je n'enseigne pas des règles de grammaire. J'enseigne la confiance, le vocabulaire et l'intelligence culturelle qui ouvrent des portes.",
+    "bio_long": "Avec plus de 10 ans d'expérience dans le marketing B2B et la communication aux EAU et en Europe, Katsiaryna apporte une perspective unique : elle a vécu exactement les défis que ses clients affrontent. Elle est titulaire du CELTA de Cambridge et a coaché plus de 500 professionnels.",
+    "creds": "Certifiée CELTA · 10+ ans d'expérience corporate · 500+ professionnels coachés · Basée à Dubaï",
+    "location": "Dubaï, EAU · En ligne dans le monde entier",
+    "feature1": "Séances individuelles adaptées à votre rôle et secteur",
+    "feature2": "Anglais des affaires pour négociations, présentations et leadership",
+    "feature3": "Progrès mesurables avec évaluations mensuelles",
+    "cta": "Réserver un appel découverte gratuit",
+    "faq_title": "Questions fréquentes",
+    "faq1_q": "Faut-il un niveau avancé pour commencer ?",
+    "faq1_a": "Non. Katsiaryna travaille avec des professionnels de niveau intermédiaire (B1) et au-delà.",
+    "faq2_q": "Combien de temps avant de voir des résultats ?",
+    "faq2_a": "La plupart des apprenants remarquent une amélioration significative de leur confiance après 4 à 6 séances.",
+    "faq3_q": "Les séances sont-elles en ligne ou en présentiel ?",
+    "faq3_a": "Toutes les séances sont en ligne via vidéoconférence (Zoom ou Google Meet).",
+    "faq4_q": "Quels sujets sont abordés ?",
+    "faq4_a": "Cela dépend de vos objectifs : présentations, négociations, emails professionnels, entretiens, communication de leadership ou développement de la confiance."
   },
   "testimonials": {
-    "title": "Histoires de Succès",
+    "title": "Témoignages",
     "subtitle": "De vrais professionnels. De vrais résultats.",
-    "t1_quote": "Elle a complètement changé mon approche de l'anglais. J'ai été promue 6 mois après nos séances.",
+    "t1_quote": "Katsiaryna a complètement transformé ma façon d'aborder l'anglais en réunion. En 3 mois, je suis passée de l'évitement des prises de parole à la direction de présentations internationales. J'ai été promue 6 mois après le début de nos séances.",
     "t1_name": "Natalia K.",
-    "t1_title": "VP Marketing",
-    "t2_quote": "De silencieuse en réunion à oratrice confiante. Ce coaching est transformateur.",
+    "t1_title": "VP Marketing, Dubaï",
+    "t2_quote": "Je restais silencieux en réunion par peur de faire des erreurs. Après 8 séances avec Katsiaryna, c'est moi qui anime les appels inter-équipes en anglais.",
     "t2_name": "Alex M.",
-    "t2_title": "Software Engineer",
-    "t3_quote": "J'ai conclu un deal de 2M$ en anglais après 3 mois de coaching. Meilleur investissement.",
+    "t2_title": "Ingénieur senior, Abu Dhabi",
+    "t3_quote": "J'ai conclu un deal de 2M$ entièrement en anglais après 3 mois de coaching. Le ROI est incalculable. Meilleur investissement de ma carrière.",
     "t3_name": "Dmitry S.",
-    "t3_title": "Fondateur Startup"
+    "t3_title": "Fondateur & PDG"
   },
   "blog": {
-    "title": "Apprenez de Notre Blog",
-    "subtitle": "Conseils gratuits sur l'anglais professionnel et le leadership",
-    "read": "Lire l'Article",
-    "category1": "Anglais Business",
-    "category2": "Préparation Entretien",
-    "category3": "Communication Pro",
-    "post1": "7 Phrases Pour Sonner Confiant en Réunion",
-    "post2": "Comment Réussir Votre Entretien d'Embauche en Anglais",
-    "post3": "Email Professionnel : 5 Modèles Qui Marchent"
+    "title": "Ressources gratuites",
+    "subtitle": "Conseils pratiques sur l'anglais professionnel pour les professionnels ambitieux",
+    "read": "Lire l'article",
+    "category1": "Anglais des affaires",
+    "category2": "Préparation aux entretiens",
+    "category3": "Communication professionnelle",
+    "post1": "7 phrases pour paraître confiant lors de réunions en anglais",
+    "post2": "Comment réussir son entretien d'embauche en anglais en tant que non-natif",
+    "post3": "Templates d'emails professionnels en anglais qui sonnent juste (pas traduit)"
   },
   "cta": {
-    "title": "Prêt à Transformer ?",
-    "subtitle": "Rejoignez 500+ professionnels qui ont maîtrisé l'anglais professionnel",
-    "button": "Réserver Votre Séance Découverte"
+    "title": "Prêt à sonner comme un leader mondial ?",
+    "subtitle": "Rejoignez 500+ professionnels russophones qui ont transformé leur communication en anglais avec Katsiaryna.",
+    "button": "Réserver votre appel découverte gratuit"
+  },
+  "faq": {
+    "title": "Questions fréquentes",
+    "q1": "À qui s'adresse ce coaching ?",
+    "a1": "Ce coaching est destiné aux professionnels russophones de niveau B1+ qui ont besoin de l'anglais pour leur carrière.",
+    "q2": "Quelle est la durée des séances ?",
+    "a2": "Chaque séance dure 50 minutes, dispensée en ligne par vidéoconférence.",
+    "q3": "En quoi est-ce différent d'une école de langues ?",
+    "a3": "Contrairement aux cours collectifs, chaque séance est individuelle et entièrement construite autour de votre contexte professionnel spécifique.",
+    "q4": "Puis-je obtenir un remboursement ?",
+    "a4": "Oui. Si après la première séance vous estimez que ce n'est pas adapté, nous remboursons le montant restant intégralement.",
+    "q5": "Enseignez-vous uniquement l'anglais des affaires ?",
+    "a5": "Le focus est l'anglais professionnel et des affaires : présentations, négociations, emails, entretiens, leadership et confiance en soi."
   },
   "footer": {
-    "tagline": "Coaching anglais expert pour professionnels russophones.",
-    "links_title": "Liens Rapides",
-    "legal_title": "Légal",
-    "contact_title": "Contact",
-    "terms": "Conditions d'Utilisation",
-    "privacy": "Politique de Confidentialité",
-    "refund": "Politique de Remboursement",
+    "tagline": "Coaching individuel en anglais professionnel pour les russophones.",
+    "links_title": "Liens rapides",
+    "legal_title": "Mentions légales",
+    "terms": "Conditions d'utilisation",
+    "privacy": "Politique de confidentialité",
+    "refund": "Politique de remboursement",
     "copy": "© 2026 English for Future Leaders. Tous droits réservés."
   }
 }

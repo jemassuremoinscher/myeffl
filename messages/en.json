@@ -11,55 +11,53 @@
   "hero": {
     "title": "Master Professional English.",
     "title2": "Become a Global Leader.",
-    "subtitle": "Expert 1-on-1 coaching for intermediate+ Russian speakers ready for the world stage",
-    "cta": "Start Your Discovery",
+    "subtitle": "Expert 1-on-1 coaching for intermediate+ Russian-speaking professionals ready to communicate with confidence at the international level.",
+    "cta": "Book Free Discovery",
     "cta_secondary": "View Packages"
   },
   "trust": {
-    "students": "Students Trained",
+    "students": "Professionals Coached",
     "certified": "CELTA Certified",
     "experience": "Years Corporate",
     "rating": "Stars Rating"
   },
   "how": {
     "title": "How It Works",
-    "step1_title": "Book a Discovery Session",
-    "step1_desc": "Easy 3-minute booking. Choose a time that works for you.",
-    "step2_title": "Assessment + Plan",
-    "step2_desc": "We assess your level, goals, and create a personalized plan.",
-    "step3_title": "Start Your Transformation",
-    "step3_desc": "Weekly sessions, real feedback, measurable progress.",
-    "step4_title": "See Results",
-    "step4_desc": "Confidence, fluency, professional transformation."
+    "step1_title": "Book a Free Discovery Call",
+    "step1_desc": "A 20-minute call to understand your goals, current level, and professional context. No commitment required.",
+    "step2_title": "Personalised Assessment & Plan",
+    "step2_desc": "Katsiaryna evaluates your English level, identifies your specific gaps, and builds a structured plan around your role and objectives.",
+    "step3_title": "Weekly Sessions. Real Progress.",
+    "step3_desc": "50-minute sessions focused on your real-world needs: presentations, negotiations, emails, or executive presence. Progress measured every month."
   },
   "packages": {
-    "title": "Choose Your Learning Path",
-    "subtitle": "Clear pricing. No hidden fees. Flexible, results-focused.",
+    "title": "Choose Your Path",
+    "subtitle": "Transparent pricing. No hidden fees. Built for busy professionals.",
     "popular": "MOST POPULAR",
     "cta": "Get Started",
     "discovery": {
       "name": "Discovery",
       "price": "$49",
-      "desc": "Perfect for testing compatibility",
+      "desc": "Test the approach before committing",
       "sessions": "2 × 50-min sessions",
-      "feature1": "Level assessment",
-      "feature2": "Personalized 3-month plan",
-      "feature3": "Follow-up mini-session"
+      "feature1": "Full level assessment",
+      "feature2": "Personalised 3-month learning roadmap",
+      "feature3": "Recording + written feedback"
     },
     "regular": {
       "name": "Regular",
       "price": "$100",
-      "desc": "Best for consistent progress",
+      "desc": "Steady, structured progress",
       "sessions": "5 × 50-min sessions",
-      "feature1": "Flexible scheduling",
-      "feature2": "Professional materials",
-      "feature3": "Written feedback each session"
+      "feature1": "Flexible scheduling (48h notice)",
+      "feature2": "Custom materials per session",
+      "feature3": "Written feedback + vocabulary list"
     },
     "group": {
       "name": "Group",
       "price": "$60",
-      "desc": "Collaborative small group learning",
-      "sessions": "5 × 50-min group (6-8 people)",
+      "desc": "Collaborative peer learning",
+      "sessions": "5 × 50-min group (max 6)",
       "feature1": "Collaborative environment",
       "feature2": "Shared resources",
       "feature3": "Weekly live sessions"
@@ -67,59 +65,81 @@
     "intensive": {
       "name": "Intensive",
       "price": "$300",
-      "desc": "Deep transformation in 4 weeks",
+      "desc": "Full transformation in 4 weeks",
       "sessions": "10 × 50-min sessions",
-      "feature1": "Intensive weekly schedule",
-      "feature2": "Full custom curriculum",
-      "feature3": "Priority booking + support"
+      "feature1": "Priority scheduling + recordings",
+      "feature2": "Fully bespoke curriculum",
+      "feature3": "Unlimited WhatsApp support"
     }
   },
   "about": {
     "title": "Meet Your Coach",
-    "subtitle": "Bilingual educator. Russian native. English expert.",
-    "bio": "I'm a native Russian speaker who became fluent in English and French. Over 10+ years, I've coached 500+ professionals — from startup founders to corporate executives — helping them transform their professional communication and unlock global opportunities.",
-    "bio2": "I don't just teach English. I teach the confidence and cultural intelligence that opens doors.",
-    "creds": "CELTA Certified • 10+ Years Corporate Training • 500+ Professionals Coached",
-    "location": "Dubai-based • Teaching Worldwide",
-    "feature1": "1-on-1 Personalized Sessions",
-    "feature2": "Small Group Classes (6-8 max)",
-    "feature3": "Professional Materials & Feedback",
-    "cta": "Book a Discovery Call"
+    "subtitle": "Bilingual educator. Business professional. Results-focused coach.",
+    "bio": "Katsiaryna is a native Russian speaker who built her career in international marketing across the MEA region before dedicating herself to coaching. Having navigated complex corporate environments in English herself, she understands exactly what Russian-speaking professionals need to succeed on the global stage.",
+    "bio2": "I don't teach grammar rules. I teach the confidence, the vocabulary, and the cultural intelligence that opens doors.",
+    "bio_long": "With over 10 years of experience working in B2B marketing and communications across the UAE and Europe, Katsiaryna brings a unique perspective: she has lived the exact challenges her clients face. She holds the Cambridge CELTA certification and has coached over 500 professionals — from startup founders to C-suite executives — at companies including Giesecke+Devrient and across multiple industries.",
+    "creds": "CELTA Certified · 10+ Years Corporate Experience · 500+ Professionals Coached · Dubai-based · Teaching Worldwide",
+    "location": "Dubai, UAE · Online Worldwide",
+    "feature1": "1-on-1 sessions tailored to your role and industry",
+    "feature2": "Business English for negotiations, presentations & leadership",
+    "feature3": "Measurable progress with monthly assessments",
+    "cta": "Book a Free Discovery Call",
+    "faq_title": "Frequently Asked Questions",
+    "faq1_q": "Do I need to be advanced to work with you?",
+    "faq1_a": "No. Katsiaryna works with intermediate (B1+) and above. If you can hold a basic conversation in English, you're ready to start.",
+    "faq2_q": "How quickly will I see results?",
+    "faq2_a": "Most students notice a significant improvement in confidence and fluency after 4–6 sessions. Measurable progress is tracked monthly.",
+    "faq3_q": "Are sessions online or in-person?",
+    "faq3_a": "All sessions are online via video call (Zoom or Google Meet), making it easy to fit into your schedule anywhere in the world.",
+    "faq4_q": "What topics do sessions cover?",
+    "faq4_a": "It depends on your goals: executive presentations, negotiations, job interviews, email writing, leadership communication, or confidence-building. Every curriculum is bespoke."
   },
   "testimonials": {
     "title": "Success Stories",
     "subtitle": "Real professionals. Real results.",
-    "t1_quote": "She completely changed my approach to English. I got promoted 6 months after our sessions started.",
+    "t1_quote": "Katsiaryna completely changed my approach to English in meetings. Within 3 months I went from avoiding speaking to leading international presentations. I got promoted 6 months after we started.",
     "t1_name": "Natalia K.",
-    "t1_title": "VP Marketing",
-    "t2_quote": "From silent in meetings to confident speaker. This coaching is life-changing.",
+    "t1_title": "VP Marketing, Dubai",
+    "t2_quote": "I was silent in meetings because I was afraid of making mistakes. After 8 sessions with Katsiaryna, I'm now the one facilitating cross-functional calls in English.",
     "t2_name": "Alex M.",
-    "t2_title": "Software Engineer",
-    "t3_quote": "I closed a $2M deal in English after 3 months of coaching. Best investment ever.",
+    "t2_title": "Senior Engineer, Abu Dhabi",
+    "t3_quote": "I closed a $2M deal entirely in English after 3 months of coaching. The ROI is impossible to calculate. Best investment I've made in my career.",
     "t3_name": "Dmitry S.",
-    "t3_title": "Startup Founder"
+    "t3_title": "Founder & CEO"
   },
   "blog": {
-    "title": "Learn From Our Blog",
-    "subtitle": "Free insights on professional English, confidence, and global leadership",
+    "title": "Free Resources",
+    "subtitle": "Practical English insights for ambitious professionals",
     "read": "Read Article",
     "category1": "Business English",
     "category2": "Interview Prep",
     "category3": "Professional Communication",
-    "post1": "7 Phrases That Make You Sound Confident in Meetings",
-    "post2": "How to Nail Your English Job Interview",
-    "post3": "Business Email: 5 Templates That Actually Work"
+    "post1": "7 Phrases That Make You Sound Confident in English Meetings",
+    "post2": "How to Nail Your English Job Interview as a Non-Native Speaker",
+    "post3": "Business Email Templates That Sound Professional (Not Translated)"
   },
   "cta": {
-    "title": "Ready to Transform?",
-    "subtitle": "Join 500+ professionals who mastered professional English",
-    "button": "Book Your Discovery Session"
+    "title": "Ready to Sound Like a Global Leader?",
+    "subtitle": "Join 500+ Russian-speaking professionals who transformed their English communication with Katsiaryna.",
+    "button": "Book Your Free Discovery Call"
+  },
+  "faq": {
+    "title": "Common Questions",
+    "q1": "Who is this coaching for?",
+    "a1": "This coaching is designed for Russian-speaking professionals at intermediate level (B1) and above who need English for their career — managers, executives, engineers, founders, and business professionals.",
+    "q2": "How long are sessions?",
+    "a2": "Each session is 50 minutes, delivered via video call. Sessions are scheduled weekly or bi-weekly depending on your package.",
+    "q3": "What makes this different from a language school?",
+    "a3": "Unlike group classes or language apps, every session is 1-on-1 and built entirely around your specific professional context, industry vocabulary, and career goals.",
+    "q4": "Can I get a refund if it's not for me?",
+    "a4": "Yes. If after your first session you feel it's not the right fit, we will refund the remaining amount in full.",
+    "q5": "Do you teach Business English only?",
+    "a5": "The focus is professional and business English. Topics include presentations, negotiations, email communication, job interviews, leadership language, and executive presence."
   },
   "footer": {
-    "tagline": "Expert English coaching for Russian-speaking professionals.",
+    "tagline": "Expert 1-on-1 English coaching for Russian-speaking professionals.",
     "links_title": "Quick Links",
     "legal_title": "Legal",
-    "contact_title": "Contact",
     "terms": "Terms of Service",
     "privacy": "Privacy Policy",
     "refund": "Refund Policy",
