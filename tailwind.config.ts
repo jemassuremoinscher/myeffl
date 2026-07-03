@@ -9,26 +9,36 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        navy: {
-          50: "#e6edf5",
-          100: "#b3c5dc",
-          200: "#809ec3",
-          300: "#4d76aa",
-          400: "#1a4f91",
-          500: "#003D7A",
-          600: "#00336a",
-          700: "#00285a",
-          800: "#001e4a",
-          900: "#001339",
+        green: {
+          950: "#002718",
+          900: "#003320",
+          800: "#004225",
+          700: "#005530",
+          600: "#006B3C",
+          500: "#008048",
+          400: "#2D9E63",
+          100: "#E8F0EB",
+          50:  "#F2F7F4",
         },
         gold: {
-          400: "#D4A574",
-          500: "#C8956A",
+          600: "#A07840",
+          500: "#B8894E",
+          400: "#C9A96E",
+          300: "#D9BC8E",
+          100: "#F5ECD8",
+        },
+        cream: {
+          DEFAULT: "#F8F7F4",
+          dark: "#EEE8DF",
+        },
+        ink: {
+          DEFAULT: "#1A1A1A",
+          light: "#3D3D3D",
+          muted: "#6B6B6B",
         }
       },
       fontFamily: {
         sans: ["Inter", "system-ui", "sans-serif"],
-        display: ["Inter", "system-ui", "sans-serif"],
       },
     },
   },

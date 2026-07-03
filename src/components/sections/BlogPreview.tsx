@@ -13,37 +13,39 @@ export default function BlogPreview() {
   const locale = useLocale();
 
   return (
-    <section className="py-20 px-4 bg-white">
+    <section className="py-20 px-4 bg-cream-dark">
       <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl font-bold text-navy-500 mb-4">
-            {t("title")}
-          </h2>
-          <p className="text-gray-600 text-lg">{t("subtitle")}</p>
+        <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-12">
+          <div>
+            <h2 className="text-3xl font-bold text-ink mb-2">{t("title")}</h2>
+            <p className="text-ink-muted text-sm">{t("subtitle")}</p>
+          </div>
+          <Link href={`/${locale}/blog`} className="text-green-800 font-semibold text-sm hover:underline whitespace-nowrap flex items-center gap-1">
+            All articles <ArrowRight size={14} />
+          </Link>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-3 gap-6">
           {posts.map((post, idx) => (
             <Link
               key={idx}
               href={`/${locale}/blog/${post.slug}`}
-              className="group block bg-white rounded-2xl overflow-hidden border border-gray-200 hover:border-navy-500/30 hover:shadow-lg transition-all"
+              className="group block bg-cream rounded-2xl overflow-hidden border border-green-100 hover:border-green-300 hover:shadow-lg transition-all"
             >
-              {/* Image placeholder */}
-              <div className="w-full h-48 bg-gradient-to-br from-navy-500 to-navy-600 relative overflow-hidden">
-                <div className="absolute inset-0 bg-white/5 group-hover:bg-white/10 transition-colors" />
+              <div className="w-full h-44 bg-gradient-to-br from-green-800 to-green-700 relative">
+                <div className="absolute inset-0 opacity-10"
+                  style={{backgroundImage: "radial-gradient(#fff 1px, transparent 0)", backgroundSize: "16px 16px"}}
+                />
               </div>
-
               <div className="p-5">
-                <p className="text-xs font-bold text-navy-500 uppercase tracking-wide mb-2">
+                <p className="text-xs font-bold text-green-700 uppercase tracking-wide mb-2">
                   {t(post.categoryKey)}
                 </p>
-                <h3 className="font-bold text-gray-900 mb-4 leading-snug group-hover:text-navy-500 transition-colors">
+                <h3 className="font-semibold text-ink text-sm leading-snug mb-4 group-hover:text-green-800 transition-colors">
                   {t(post.titleKey)}
                 </h3>
-                <span className="inline-flex items-center gap-1 text-navy-500 font-bold text-sm group-hover:gap-2 transition-all">
-                  {t("read")}
-                  <ArrowRight size={14} />
+                <span className="inline-flex items-center gap-1 text-green-800 font-semibold text-xs group-hover:gap-2 transition-all">
+                  {t("read")} <ArrowRight size={12} />
                 </span>
               </div>
             </Link>

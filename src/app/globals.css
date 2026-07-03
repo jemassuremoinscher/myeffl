@@ -4,28 +4,20 @@
 
 @layer base {
   :root {
-    --navy: #003D7A;
-    --gold: #D4A574;
+    --green: #004225;
+    --gold: #C9A96E;
+    --cream: #F8F7F4;
+    --ink: #1A1A1A;
   }
 
-  html {
-    scroll-behavior: smooth;
-  }
+  html { scroll-behavior: smooth; }
 
   body {
-    @apply text-gray-900 antialiased;
+    @apply text-ink antialiased;
+    background-color: #F8F7F4;
   }
 
-  /* Foldable phone support */
-  @media (min-width: 344px) and (max-width: 428px) {
-    .container {
-      padding-left: 1rem;
-      padding-right: 1rem;
-    }
+  h1, h2, h3 {
+    letter-spacing: -0.02em;
   }
-}
-
-@layer utilities {
-  .text-navy { color: #003D7A; }
-  .bg-navy { background-color: #003D7A; }
 }

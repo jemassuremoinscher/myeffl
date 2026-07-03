@@ -6,37 +6,34 @@ export default function Footer() {
   const locale = useLocale();
 
   return (
-    <footer className="bg-navy-500 text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+    <footer className="bg-ink text-cream">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 mb-10">
           {/* Brand */}
-          <div className="lg:col-span-2">
+          <div>
             <div className="flex items-center gap-2 mb-4">
-              <div className="w-9 h-9 bg-white/20 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold">✨</span>
+              <div className="w-8 h-8 bg-green-800 rounded-md flex items-center justify-center">
+                <span className="text-gold-400 font-bold text-sm">E</span>
               </div>
-              <div>
-                <p className="font-bold text-white">EFFL</p>
-                <p className="text-xs text-blue-200">English for Future Leaders</p>
-              </div>
+              <p className="font-bold text-cream text-sm">EFFL</p>
             </div>
-            <p className="text-blue-200 text-sm max-w-xs leading-relaxed">
-              {t("tagline")}
-            </p>
-            <p className="text-blue-200 text-sm mt-2">📍 Dubai, UAE • 🌍 Worldwide</p>
+            <p className="text-gray-400 text-sm leading-relaxed max-w-xs">{t("tagline")}</p>
+            <p className="text-gray-500 text-xs mt-3">📍 Dubai, UAE · 🌍 Online Worldwide</p>
           </div>
 
-          {/* Quick Links */}
+          {/* Links */}
           <div>
-            <h4 className="font-bold text-white mb-4 text-sm">{t("links_title")}</h4>
-            <ul className="space-y-2">
-              {["home", "packages", "about", "blog"].map((key) => (
-                <li key={key}>
-                  <Link
-                    href={`/${locale}/${key === "home" ? "" : key}`}
-                    className="text-blue-200 hover:text-white text-sm transition-colors capitalize"
-                  >
-                    {key.charAt(0).toUpperCase() + key.slice(1)}
+            <h4 className="font-semibold text-cream text-sm mb-4">{t("links_title")}</h4>
+            <ul className="space-y-2.5">
+              {[
+                { label: "Home", href: `/${locale}` },
+                { label: "Packages", href: `/${locale}/packages` },
+                { label: "About", href: `/${locale}/about` },
+                { label: "Blog", href: `/${locale}/blog` },
+              ].map(item => (
+                <li key={item.href}>
+                  <Link href={item.href} className="text-gray-400 hover:text-cream text-sm transition-colors">
+                    {item.label}
                   </Link>
                 </li>
               ))}
@@ -45,20 +42,20 @@ export default function Footer() {
 
           {/* Legal */}
           <div>
-            <h4 className="font-bold text-white mb-4 text-sm">{t("legal_title")}</h4>
-            <ul className="space-y-2">
+            <h4 className="font-semibold text-cream text-sm mb-4">{t("legal_title")}</h4>
+            <ul className="space-y-2.5">
               <li>
-                <Link href={`/${locale}/legal/terms`} className="text-blue-200 hover:text-white text-sm transition-colors">
+                <Link href={`/${locale}/legal/terms`} className="text-gray-400 hover:text-cream text-sm transition-colors">
                   {t("terms")}
                 </Link>
               </li>
               <li>
-                <Link href={`/${locale}/legal/privacy`} className="text-blue-200 hover:text-white text-sm transition-colors">
+                <Link href={`/${locale}/legal/privacy`} className="text-gray-400 hover:text-cream text-sm transition-colors">
                   {t("privacy")}
                 </Link>
               </li>
               <li>
-                <Link href={`/${locale}/legal/refund`} className="text-blue-200 hover:text-white text-sm transition-colors">
+                <Link href={`/${locale}/legal/refund`} className="text-gray-400 hover:text-cream text-sm transition-colors">
                   {t("refund")}
                 </Link>
               </li>
@@ -66,9 +63,8 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Bottom bar */}
-        <div className="mt-10 pt-6 border-t border-white/10 text-center">
-          <p className="text-blue-200 text-xs">{t("copy")}</p>
+        <div className="border-t border-gray-800 pt-6 text-center">
+          <p className="text-gray-500 text-xs">{t("copy")}</p>
         </div>
       </div>
     </footer>
