@@ -6,11 +6,7 @@ import { usePathname } from "next/navigation";
 import { useTranslations, useLocale } from "next-intl";
 import { Menu, X } from "lucide-react";
 
-const locales = [
-  { code: "en", label: "EN" },
-  { code: "fr", label: "FR" },
-  { code: "ru", label: "RU" },
-];
+const locales = [{ code:"en",label:"EN" },{ code:"fr",label:"FR" },{ code:"ru",label:"RU" }];
 
 export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -18,108 +14,84 @@ export default function Navbar() {
   const locale = useLocale();
   const pathname = usePathname();
 
-  const getLocalizedPath = (newLocale: string) => {
-    const segments = pathname.split("/");
-    segments[1] = newLocale;
-    return segments.join("/");
+  const getLocalizedPath = (lc: string) => {
+    const s = pathname.split("/"); s[1] = lc; return s.join("/");
   };
 
   const navItems = [
-    { key: "about", href: `/${locale}/about` },
-    { key: "packages", href: `/${locale}/packages` },
-    { key: "blog", href: `/${locale}/blog` },
+    { key:"about", href:`/${locale}/about` },
+    { key:"packages", href:`/${locale}/packages` },
+    { key:"blog", href:`/${locale}/blog` },
   ];
 
   return (
-    <nav className="sticky top-0 z-50 bg-cream border-b border-green-100">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
+    <nav className="sticky top-0 z-50 bg-surface/80 backdrop-blur-xl border-b border-outline-variant/40">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
 
-          {/* Logo */}
-          <Link href={`/${locale}`} className="flex items-center gap-2.5">
-            <div className="w-8 h-8 bg-green-800 rounded-md flex items-center justify-center">
-              <span className="text-gold-400 font-bold text-sm">E</span>
-            </div>
-            <div>
-              <p className="text-sm font-bold text-green-800 leading-tight tracking-tight">EFFL</p>
-              <p className="text-xs text-ink-muted leading-tight">English for Future Leaders</p>
-            </div>
-          </Link>
-
-          {/* Desktop nav */}
-          <div className="hidden md:flex items-center gap-6">
-            {navItems.map((item) => (
-              <Link
-                key={item.key}
-                href={item.href}
-                className="text-sm font-medium text-ink-light hover:text-green-800 transition-colors"
-              >
-                {t(item.key)}
-              </Link>
-            ))}
+        {/* Logo */}
+        <Link href={`/${locale}`} className="flex items-center gap-2.5 group">
+          <div className="w-9 h-9 bg-primary rounded-2xl flex items-center justify-center shadow-elevation-1 group-hover:shadow-elevation-2 transition-shadow">
+            <span className="text-secondary font-black text-base">E</span>
           </div>
+          <div className="hidden sm:block">
+            <p className="text-xs font-black text-primary tracking-widest uppercase leading-none">EFFL</p>
+            <p className="text-[10px] text-on-muted leading-tight">English for Future Leaders</p>
+          </div>
+        </Link>
 
-          {/* Right */}
-          <div className="flex items-center gap-3">
-            {/* Lang switcher */}
-            <div className="flex bg-green-100 rounded-lg p-0.5 gap-0.5">
-              {locales.map((loc) => (
-                <Link
-                  key={loc.code}
-                  href={getLocalizedPath(loc.code)}
-                  className={`px-2.5 py-1 text-xs font-bold rounded-md transition-all ${
-                    locale === loc.code
-                      ? "bg-green-800 text-cream"
-                      : "text-ink-muted hover:text-green-800"
-                  }`}
-                >
-                  {loc.label}
-                </Link>
-              ))}
-            </div>
-
-            {/* CTA */}
-            <Link
-              href={`/${locale}/contact`}
-              className="hidden sm:inline-flex items-center bg-green-800 text-cream px-4 py-2 rounded-lg text-sm font-semibold hover:bg-green-900 transition-colors"
-            >
-              {t("book")}
+        {/* Nav desktop */}
+        <div className="hidden md:flex items-center gap-1">
+          {navItems.map(item => (
+            <Link key={item.key} href={item.href}
+              className="px-4 py-2 rounded-full text-sm font-medium text-on-surface hover:bg-container-tertiary transition-colors md3-state-layer">
+              {t(item.key)}
             </Link>
-
-            <button
-              onClick={() => setMobileOpen(!mobileOpen)}
-              className="md:hidden p-2 rounded-lg hover:bg-green-100 text-ink"
-            >
-              {mobileOpen ? <X size={20} /> : <Menu size={20} />}
-            </button>
-          </div>
+          ))}
         </div>
 
-        {/* Mobile menu */}
-        {mobileOpen && (
-          <div className="md:hidden py-4 border-t border-green-100 space-y-1">
-            {navItems.map((item) => (
-              <Link
-                key={item.key}
-                href={item.href}
-                onClick={() => setMobileOpen(false)}
-                className="block px-4 py-2.5 text-sm font-medium text-ink hover:text-green-800 hover:bg-green-50 rounded-lg transition-colors"
-              >
-                {t(item.key)}
+        <div className="flex items-center gap-2">
+          {/* Lang pill */}
+          <div className="flex bg-container-tertiary rounded-full p-0.5 gap-0.5">
+            {locales.map(loc => (
+              <Link key={loc.code} href={getLocalizedPath(loc.code)}
+                className={`px-3 py-1 text-[11px] font-bold rounded-full transition-all ${
+                  locale === loc.code
+                    ? "bg-primary text-on-primary shadow-elevation-1"
+                    : "text-on-muted hover:text-primary"
+                }`}>
+                {loc.label}
               </Link>
             ))}
-            <div className="pt-2 px-4">
-              <Link
-                href={`/${locale}/contact`}
-                onClick={() => setMobileOpen(false)}
-                className="block w-full text-center bg-green-800 text-cream px-4 py-2.5 rounded-lg text-sm font-semibold"
-              >
-                {t("book")}
-              </Link>
-            </div>
           </div>
-        )}
+
+          {/* CTA */}
+          <Link href={`/${locale}/contact`}
+            className="hidden sm:inline-flex items-center gap-1.5 bg-primary text-on-primary px-5 py-2.5 rounded-full text-sm font-semibold shadow-elevation-1 hover:shadow-elevation-2 transition-all md3-state-layer">
+            {t("book")}
+          </Link>
+
+          <button onClick={() => setMobileOpen(!mobileOpen)}
+            className="md:hidden p-2 rounded-full hover:bg-container-tertiary text-on-surface transition-colors">
+            {mobileOpen ? <X size={20}/> : <Menu size={20}/>}
+          </button>
+        </div>
       </div>
+
+      {/* Mobile drawer */}
+      {mobileOpen && (
+        <div className="md:hidden border-t border-outline-variant/30 bg-surface px-4 pb-4 pt-2 space-y-1">
+          {navItems.map(item => (
+            <Link key={item.key} href={item.href} onClick={() => setMobileOpen(false)}
+              className="block px-4 py-3 text-sm font-medium text-on-surface hover:bg-container-tertiary rounded-2xl transition-colors">
+              {t(item.key)}
+            </Link>
+          ))}
+          <Link href={`/${locale}/contact`} onClick={() => setMobileOpen(false)}
+            className="block w-full text-center bg-primary text-on-primary px-4 py-3 rounded-full text-sm font-semibold mt-2">
+            {t("book")}
+          </Link>
+        </div>
+      )}
     </nav>
   );
 }

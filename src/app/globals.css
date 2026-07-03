@@ -4,20 +4,35 @@
 
 @layer base {
   :root {
-    --green: #004225;
-    --gold: #C9A96E;
-    --cream: #F8F7F4;
-    --ink: #1A1A1A;
+    --md-primary: #004225;
+    --md-secondary: #C9A96E;
+    --md-surface: #F8F7F4;
+    --md-surface-dim: #EDE8E0;
+    --md-container-primary: #CEEAD8;
+    --md-container-secondary: #F5E6CC;
+    --md-on-surface: #1A1A1A;
+    --md-on-muted: #6B6B5E;
   }
 
   html { scroll-behavior: smooth; }
 
   body {
-    @apply text-ink antialiased;
-    background-color: #F8F7F4;
+    @apply antialiased;
+    background-color: var(--md-surface);
+    color: var(--md-on-surface);
+    font-family: "Inter", system-ui, sans-serif;
   }
+}
 
-  h1, h2, h3 {
-    letter-spacing: -0.02em;
+@layer utilities {
+  .md3-state-layer {
+    @apply relative overflow-hidden;
   }
+  .md3-state-layer::after {
+    content: "";
+    @apply absolute inset-0 opacity-0 bg-current transition-opacity duration-150 rounded-[inherit];
+    pointer-events: none;
+  }
+  .md3-state-layer:hover::after  { opacity: 0.08; }
+  .md3-state-layer:active::after { opacity: 0.12; }
 }
