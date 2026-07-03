@@ -6,36 +6,34 @@ export default function Footer() {
   const locale = useLocale();
 
   return (
-    <footer className="bg-on-surface text-surface-bright">
-      <div className="max-w-6xl mx-auto px-4 sm:px-8 py-14">
-        <div className="grid sm:grid-cols-3 gap-10 mb-12">
+    <footer className="bg-ink text-ink-inv">
+      <div className="container-xl py-14">
+        <div className="grid sm:grid-cols-4 gap-10 mb-12">
 
-          <div>
-            <div className="flex items-center gap-2 mb-5">
-              <div className="w-9 h-9 bg-primary rounded-2xl flex items-center justify-center shadow-elevation-1">
-                <span className="text-secondary font-black text-base">E</span>
+          <div className="sm:col-span-2">
+            <div className="flex items-center gap-2.5 mb-5">
+              <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
+                <span className="text-gold font-black text-sm">E</span>
               </div>
-              <span className="font-black text-sm tracking-widest uppercase text-surface-bright">EFFL</span>
+              <span className="text-xs font-black tracking-[0.2em] uppercase text-ink-inv/80">EFFL</span>
             </div>
-            <p className="text-sm text-surface-dim/60 leading-relaxed max-w-[220px]">{t("tagline")}</p>
-            <div className="flex gap-2 mt-5">
-              {["🇷🇺","🇬🇧","🇫🇷"].map(f => (
-                <span key={f} className="text-xl">{f}</span>
-              ))}
-            </div>
+            <p className="text-sm text-ink-inv/40 leading-relaxed max-w-[28ch]">{t("tagline")}</p>
+            <p className="text-xs text-ink-inv/25 mt-5">📍 Dubai, UAE · 🌍 Online Worldwide</p>
           </div>
 
           <div>
-            <h4 className="text-xs font-bold uppercase tracking-widest text-surface-dim/50 mb-5">{t("links_title")}</h4>
+            <p className="text-[10px] font-bold uppercase tracking-[0.15em] text-ink-inv/30 mb-5">
+              {t("links_title")}
+            </p>
             <ul className="space-y-3">
               {[
-                {label:"Home", href:`/${locale}`},
+                {label:"Home",     href:`/${locale}`},
                 {label:"Packages", href:`/${locale}/packages`},
-                {label:"About", href:`/${locale}/about`},
-                {label:"Blog", href:`/${locale}/blog`},
+                {label:"About",    href:`/${locale}/about`},
+                {label:"Blog",     href:`/${locale}/blog`},
               ].map(item => (
                 <li key={item.href}>
-                  <Link href={item.href} className="text-sm text-surface-dim/60 hover:text-surface-bright transition-colors">
+                  <Link href={item.href} className="text-sm text-ink-inv/50 hover:text-ink-inv transition-colors">
                     {item.label}
                   </Link>
                 </li>
@@ -44,18 +42,20 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="text-xs font-bold uppercase tracking-widest text-surface-dim/50 mb-5">{t("legal_title")}</h4>
+            <p className="text-[10px] font-bold uppercase tracking-[0.15em] text-ink-inv/30 mb-5">
+              {t("legal_title")}
+            </p>
             <ul className="space-y-3">
-              <li><Link href={`/${locale}/legal/terms`} className="text-sm text-surface-dim/60 hover:text-surface-bright transition-colors">{t("terms")}</Link></li>
-              <li><Link href={`/${locale}/legal/privacy`} className="text-sm text-surface-dim/60 hover:text-surface-bright transition-colors">{t("privacy")}</Link></li>
-              <li><Link href={`/${locale}/legal/refund`} className="text-sm text-surface-dim/60 hover:text-surface-bright transition-colors">{t("refund")}</Link></li>
+              <li><Link href={`/${locale}/legal/terms`}   className="text-sm text-ink-inv/50 hover:text-ink-inv transition-colors">{t("terms")}</Link></li>
+              <li><Link href={`/${locale}/legal/privacy`} className="text-sm text-ink-inv/50 hover:text-ink-inv transition-colors">{t("privacy")}</Link></li>
+              <li><Link href={`/${locale}/legal/refund`}  className="text-sm text-ink-inv/50 hover:text-ink-inv transition-colors">{t("refund")}</Link></li>
             </ul>
           </div>
         </div>
 
-        <div className="border-t border-surface-dim/10 pt-6 flex flex-col sm:flex-row justify-between items-center gap-3">
-          <p className="text-xs text-surface-dim/40">{t("copy")}</p>
-          <p className="text-xs text-surface-dim/30">📍 Dubai, UAE · 🌍 Online Worldwide</p>
+        <div className="border-t border-ink-inv/10 pt-6 flex flex-col sm:flex-row justify-between gap-2">
+          <p className="text-xs text-ink-inv/25">{t("copy")}</p>
+          <p className="text-xs text-ink-inv/15">English for Future Leaders · All rights reserved</p>
         </div>
       </div>
     </footer>

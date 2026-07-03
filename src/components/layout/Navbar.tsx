@@ -1,97 +1,94 @@
 "use client";
-
 import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useTranslations, useLocale } from "next-intl";
 import { Menu, X } from "lucide-react";
 
-const locales = [{ code:"en",label:"EN" },{ code:"fr",label:"FR" },{ code:"ru",label:"RU" }];
+const locales = [{ code:"en",label:"EN"},{ code:"fr",label:"FR"},{ code:"ru",label:"RU"}];
 
 export default function Navbar() {
-  const [mobileOpen, setMobileOpen] = useState(false);
+  const [open, setOpen] = useState(false);
   const t = useTranslations("nav");
   const locale = useLocale();
   const pathname = usePathname();
 
-  const getLocalizedPath = (lc: string) => {
-    const s = pathname.split("/"); s[1] = lc; return s.join("/");
-  };
+  const getPath = (lc: string) => { const s = pathname.split("/"); s[1]=lc; return s.join("/"); };
 
-  const navItems = [
-    { key:"about", href:`/${locale}/about` },
+  const nav = [
+    { key:"about",    href:`/${locale}/about` },
     { key:"packages", href:`/${locale}/packages` },
-    { key:"blog", href:`/${locale}/blog` },
+    { key:"blog",     href:`/${locale}/blog` },
   ];
 
   return (
-    <nav className="sticky top-0 z-50 bg-surface/80 backdrop-blur-xl border-b border-outline-variant/40">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+    <header className="sticky top-0 z-50 bg-cream/95 backdrop-blur border-b border-border">
+      <div className="container-xl flex items-center justify-between h-[68px]">
 
         {/* Logo */}
-        <Link href={`/${locale}`} className="flex items-center gap-2.5 group">
-          <div className="w-9 h-9 bg-primary rounded-2xl flex items-center justify-center shadow-elevation-1 group-hover:shadow-elevation-2 transition-shadow">
-            <span className="text-secondary font-black text-base">E</span>
+        <Link href={`/${locale}`} className="flex items-center gap-3">
+          <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
+            <span className="text-gold font-black text-sm">E</span>
           </div>
           <div className="hidden sm:block">
-            <p className="text-xs font-black text-primary tracking-widest uppercase leading-none">EFFL</p>
-            <p className="text-[10px] text-on-muted leading-tight">English for Future Leaders</p>
+            <p className="text-[11px] font-black text-primary tracking-[0.2em] uppercase leading-none">EFFL</p>
+            <p className="text-[9px] text-muted leading-tight mt-0.5 tracking-wide">English for Future Leaders</p>
           </div>
         </Link>
 
-        {/* Nav desktop */}
-        <div className="hidden md:flex items-center gap-1">
-          {navItems.map(item => (
+        {/* Desktop nav */}
+        <nav className="hidden md:flex items-center gap-8">
+          {nav.map(item => (
             <Link key={item.key} href={item.href}
-              className="px-4 py-2 rounded-full text-sm font-medium text-on-surface hover:bg-container-tertiary transition-colors md3-state-layer">
+              className="text-sm text-muted hover:text-ink transition-colors font-medium">
               {t(item.key)}
             </Link>
           ))}
-        </div>
+        </nav>
 
-        <div className="flex items-center gap-2">
-          {/* Lang pill */}
-          <div className="flex bg-container-tertiary rounded-full p-0.5 gap-0.5">
-            {locales.map(loc => (
-              <Link key={loc.code} href={getLocalizedPath(loc.code)}
-                className={`px-3 py-1 text-[11px] font-bold rounded-full transition-all ${
+        <div className="flex items-center gap-3">
+          {/* Lang switcher */}
+          <div className="flex items-center border border-border rounded-lg overflow-hidden">
+            {locales.map((loc, i) => (
+              <Link key={loc.code} href={getPath(loc.code)}
+                className={`px-2.5 py-1.5 text-[11px] font-bold transition-colors ${
+                  i < locales.length - 1 ? "border-r border-border" : ""
+                } ${
                   locale === loc.code
-                    ? "bg-primary text-on-primary shadow-elevation-1"
-                    : "text-on-muted hover:text-primary"
+                    ? "bg-primary text-ink-inv"
+                    : "text-muted hover:text-ink bg-transparent"
                 }`}>
                 {loc.label}
               </Link>
             ))}
           </div>
 
-          {/* CTA */}
-          <Link href={`/${locale}/contact`}
-            className="hidden sm:inline-flex items-center gap-1.5 bg-primary text-on-primary px-5 py-2.5 rounded-full text-sm font-semibold shadow-elevation-1 hover:shadow-elevation-2 transition-all md3-state-layer">
+          <Link href={`/${locale}/contact`} className="hidden sm:inline-flex btn-primary">
             {t("book")}
           </Link>
 
-          <button onClick={() => setMobileOpen(!mobileOpen)}
-            className="md:hidden p-2 rounded-full hover:bg-container-tertiary text-on-surface transition-colors">
-            {mobileOpen ? <X size={20}/> : <Menu size={20}/>}
+          <button onClick={() => setOpen(!open)}
+            className="md:hidden p-2 rounded-lg hover:bg-border/50 text-ink transition-colors">
+            {open ? <X size={18}/> : <Menu size={18}/>}
           </button>
         </div>
       </div>
 
-      {/* Mobile drawer */}
-      {mobileOpen && (
-        <div className="md:hidden border-t border-outline-variant/30 bg-surface px-4 pb-4 pt-2 space-y-1">
-          {navItems.map(item => (
-            <Link key={item.key} href={item.href} onClick={() => setMobileOpen(false)}
-              className="block px-4 py-3 text-sm font-medium text-on-surface hover:bg-container-tertiary rounded-2xl transition-colors">
+      {/* Mobile */}
+      {open && (
+        <div className="md:hidden border-t border-border bg-cream px-4 py-4 space-y-1">
+          {nav.map(item => (
+            <Link key={item.key} href={item.href} onClick={() => setOpen(false)}
+              className="block px-3 py-2.5 text-sm font-medium text-ink hover:bg-border/40 rounded-lg transition-colors">
               {t(item.key)}
             </Link>
           ))}
-          <Link href={`/${locale}/contact`} onClick={() => setMobileOpen(false)}
-            className="block w-full text-center bg-primary text-on-primary px-4 py-3 rounded-full text-sm font-semibold mt-2">
+          <Link href={`/${locale}/contact`} onClick={() => setOpen(false)}
+            className="block w-full text-center btn-primary mt-3 justify-center">
             {t("book")}
           </Link>
         </div>
       )}
-    </nav>
+    </header>
   );
 }

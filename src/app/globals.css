@@ -3,36 +3,31 @@
 @tailwind utilities;
 
 @layer base {
-  :root {
-    --md-primary: #004225;
-    --md-secondary: #C9A96E;
-    --md-surface: #F8F7F4;
-    --md-surface-dim: #EDE8E0;
-    --md-container-primary: #CEEAD8;
-    --md-container-secondary: #F5E6CC;
-    --md-on-surface: #1A1A1A;
-    --md-on-muted: #6B6B5E;
-  }
-
   html { scroll-behavior: smooth; }
 
   body {
-    @apply antialiased;
-    background-color: var(--md-surface);
-    color: var(--md-on-surface);
+    @apply antialiased bg-cream text-ink;
     font-family: "Inter", system-ui, sans-serif;
   }
+
+  h1,h2,h3,h4 { letter-spacing: -0.025em; }
 }
 
-@layer utilities {
-  .md3-state-layer {
-    @apply relative overflow-hidden;
+@layer components {
+  .label {
+    @apply text-xs font-bold uppercase tracking-[0.12em] text-muted;
   }
-  .md3-state-layer::after {
-    content: "";
-    @apply absolute inset-0 opacity-0 bg-current transition-opacity duration-150 rounded-[inherit];
-    pointer-events: none;
+  .btn-primary {
+    @apply inline-flex items-center gap-2 bg-primary text-ink-inv
+           px-6 py-3.5 rounded-xl text-sm font-semibold
+           hover:bg-[#003520] transition-colors;
   }
-  .md3-state-layer:hover::after  { opacity: 0.08; }
-  .md3-state-layer:active::after { opacity: 0.12; }
+  .btn-outline {
+    @apply inline-flex items-center gap-2 border border-primary text-primary
+           px-6 py-3.5 rounded-xl text-sm font-semibold
+           hover:bg-primary/5 transition-colors;
+  }
+  .section { @apply py-section px-4; }
+  .container-xl { @apply max-w-6xl mx-auto; }
+  .divider { @apply w-10 h-0.5 bg-gold mb-8; }
 }
