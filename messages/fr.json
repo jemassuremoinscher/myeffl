@@ -1,0 +1,128 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "packages": "Forfaits",
+    "about": "À Propos",
+    "blog": "Blog",
+    "resources": "Ressources",
+    "contact": "Contact",
+    "book": "Réserver"
+  },
+  "hero": {
+    "title": "Maîtrisez l'Anglais Professionnel.",
+    "title2": "Maîtrisez Votre Avenir.",
+    "subtitle": "Coaching spécialisé pour russophones intermédiaires+ préparant un rôle de leader mondial",
+    "cta": "Commencer",
+    "cta_secondary": "Voir les Forfaits"
+  },
+  "trust": {
+    "students": "Étudiants Formés",
+    "certified": "Certifiée CELTA",
+    "experience": "Ans Corporatif",
+    "rating": "Étoiles"
+  },
+  "how": {
+    "title": "Comment Ça Marche",
+    "step1_title": "Réservez une Séance",
+    "step1_desc": "Réservation simple en 3 minutes. Choisissez votre créneau.",
+    "step2_title": "Évaluation + Plan",
+    "step2_desc": "On évalue votre niveau et crée un plan personnalisé.",
+    "step3_title": "Commencez la Transformation",
+    "step3_desc": "Séances hebdomadaires, feedback réel, progrès mesurables.",
+    "step4_title": "Voyez les Résultats",
+    "step4_desc": "Confiance, fluidité, transformation professionnelle."
+  },
+  "packages": {
+    "title": "Votre Chemin d'Apprentissage",
+    "subtitle": "Prix clairs. Aucun frais caché. Flexible et orienté résultats.",
+    "popular": "LE PLUS POPULAIRE",
+    "cta": "Commencer",
+    "discovery": {
+      "name": "Découverte",
+      "price": "49€",
+      "desc": "Parfait pour tester la compatibilité",
+      "sessions": "2 × 50 min",
+      "feature1": "Évaluation du niveau",
+      "feature2": "Plan personnalisé 3 mois",
+      "feature3": "Mini-séance de suivi"
+    },
+    "regular": {
+      "name": "Régulier",
+      "price": "100€",
+      "desc": "Idéal pour une progression constante",
+      "sessions": "5 × 50 min",
+      "feature1": "Planning flexible",
+      "feature2": "Matériels professionnels",
+      "feature3": "Feedback écrit après chaque séance"
+    },
+    "group": {
+      "name": "Groupe",
+      "price": "60€",
+      "desc": "Apprentissage collaboratif en petit groupe",
+      "sessions": "5 × 50 min groupe (6-8 pers.)",
+      "feature1": "Environnement collaboratif",
+      "feature2": "Ressources partagées",
+      "feature3": "Séances live hebdomadaires"
+    },
+    "intensive": {
+      "name": "Intensif",
+      "price": "300€",
+      "desc": "Transformation profonde en 4 semaines",
+      "sessions": "10 × 50 min",
+      "feature1": "Planning intensif hebdomadaire",
+      "feature2": "Curriculum entièrement personnalisé",
+      "feature3": "Réservation prioritaire + support"
+    }
+  },
+  "about": {
+    "title": "Rencontrez Votre Coach",
+    "subtitle": "Éducatrice bilingue. Native russe. Experte anglais.",
+    "bio": "Locutrice native du russe, je suis devenue couramment bilingue en anglais et français. Depuis 10+ ans, j'ai coaché 500+ professionnels — des fondateurs de startup aux cadres dirigeants — pour transformer leur communication professionnelle et ouvrir les portes mondiales.",
+    "bio2": "Je n'enseigne pas juste l'anglais. J'enseigne la confiance et l'intelligence culturelle qui ouvrent les portes.",
+    "creds": "Certifiée CELTA • 10+ Ans Formation Corporative • 500+ Professionnels Coachés",
+    "location": "Basée à Dubaï • Cours dans le monde entier",
+    "feature1": "Sessions personnalisées 1-on-1",
+    "feature2": "Petits groupes (6-8 max)",
+    "feature3": "Matériels professionnels & feedback",
+    "cta": "Réserver un appel découverte"
+  },
+  "testimonials": {
+    "title": "Histoires de Succès",
+    "subtitle": "De vrais professionnels. De vrais résultats.",
+    "t1_quote": "Elle a complètement changé mon approche de l'anglais. J'ai été promue 6 mois après nos séances.",
+    "t1_name": "Natalia K.",
+    "t1_title": "VP Marketing",
+    "t2_quote": "De silencieuse en réunion à oratrice confiante. Ce coaching est transformateur.",
+    "t2_name": "Alex M.",
+    "t2_title": "Software Engineer",
+    "t3_quote": "J'ai conclu un deal de 2M$ en anglais après 3 mois de coaching. Meilleur investissement.",
+    "t3_name": "Dmitry S.",
+    "t3_title": "Fondateur Startup"
+  },
+  "blog": {
+    "title": "Apprenez de Notre Blog",
+    "subtitle": "Conseils gratuits sur l'anglais professionnel et le leadership",
+    "read": "Lire l'Article",
+    "category1": "Anglais Business",
+    "category2": "Préparation Entretien",
+    "category3": "Communication Pro",
+    "post1": "7 Phrases Pour Sonner Confiant en Réunion",
+    "post2": "Comment Réussir Votre Entretien d'Embauche en Anglais",
+    "post3": "Email Professionnel : 5 Modèles Qui Marchent"
+  },
+  "cta": {
+    "title": "Prêt à Transformer ?",
+    "subtitle": "Rejoignez 500+ professionnels qui ont maîtrisé l'anglais professionnel",
+    "button": "Réserver Votre Séance Découverte"
+  },
+  "footer": {
+    "tagline": "Coaching anglais expert pour professionnels russophones.",
+    "links_title": "Liens Rapides",
+    "legal_title": "Légal",
+    "contact_title": "Contact",
+    "terms": "Conditions d'Utilisation",
+    "privacy": "Politique de Confidentialité",
+    "refund": "Politique de Remboursement",
+    "copy": "© 2026 English for Future Leaders. Tous droits réservés."
+  }
+}

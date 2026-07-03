@@ -1,0 +1,128 @@
+{
+  "nav": {
+    "home": "Home",
+    "packages": "Packages",
+    "about": "About",
+    "blog": "Blog",
+    "resources": "Resources",
+    "contact": "Contact",
+    "book": "Book Discovery"
+  },
+  "hero": {
+    "title": "Master Professional English.",
+    "title2": "Become a Global Leader.",
+    "subtitle": "Expert 1-on-1 coaching for intermediate+ Russian speakers ready for the world stage",
+    "cta": "Start Your Discovery",
+    "cta_secondary": "View Packages"
+  },
+  "trust": {
+    "students": "Students Trained",
+    "certified": "CELTA Certified",
+    "experience": "Years Corporate",
+    "rating": "Stars Rating"
+  },
+  "how": {
+    "title": "How It Works",
+    "step1_title": "Book a Discovery Session",
+    "step1_desc": "Easy 3-minute booking. Choose a time that works for you.",
+    "step2_title": "Assessment + Plan",
+    "step2_desc": "We assess your level, goals, and create a personalized plan.",
+    "step3_title": "Start Your Transformation",
+    "step3_desc": "Weekly sessions, real feedback, measurable progress.",
+    "step4_title": "See Results",
+    "step4_desc": "Confidence, fluency, professional transformation."
+  },
+  "packages": {
+    "title": "Choose Your Learning Path",
+    "subtitle": "Clear pricing. No hidden fees. Flexible, results-focused.",
+    "popular": "MOST POPULAR",
+    "cta": "Get Started",
+    "discovery": {
+      "name": "Discovery",
+      "price": "$49",
+      "desc": "Perfect for testing compatibility",
+      "sessions": "2 × 50-min sessions",
+      "feature1": "Level assessment",
+      "feature2": "Personalized 3-month plan",
+      "feature3": "Follow-up mini-session"
+    },
+    "regular": {
+      "name": "Regular",
+      "price": "$100",
+      "desc": "Best for consistent progress",
+      "sessions": "5 × 50-min sessions",
+      "feature1": "Flexible scheduling",
+      "feature2": "Professional materials",
+      "feature3": "Written feedback each session"
+    },
+    "group": {
+      "name": "Group",
+      "price": "$60",
+      "desc": "Collaborative small group learning",
+      "sessions": "5 × 50-min group (6-8 people)",
+      "feature1": "Collaborative environment",
+      "feature2": "Shared resources",
+      "feature3": "Weekly live sessions"
+    },
+    "intensive": {
+      "name": "Intensive",
+      "price": "$300",
+      "desc": "Deep transformation in 4 weeks",
+      "sessions": "10 × 50-min sessions",
+      "feature1": "Intensive weekly schedule",
+      "feature2": "Full custom curriculum",
+      "feature3": "Priority booking + support"
+    }
+  },
+  "about": {
+    "title": "Meet Your Coach",
+    "subtitle": "Bilingual educator. Russian native. English expert.",
+    "bio": "I'm a native Russian speaker who became fluent in English and French. Over 10+ years, I've coached 500+ professionals — from startup founders to corporate executives — helping them transform their professional communication and unlock global opportunities.",
+    "bio2": "I don't just teach English. I teach the confidence and cultural intelligence that opens doors.",
+    "creds": "CELTA Certified • 10+ Years Corporate Training • 500+ Professionals Coached",
+    "location": "Dubai-based • Teaching Worldwide",
+    "feature1": "1-on-1 Personalized Sessions",
+    "feature2": "Small Group Classes (6-8 max)",
+    "feature3": "Professional Materials & Feedback",
+    "cta": "Book a Discovery Call"
+  },
+  "testimonials": {
+    "title": "Success Stories",
+    "subtitle": "Real professionals. Real results.",
+    "t1_quote": "She completely changed my approach to English. I got promoted 6 months after our sessions started.",
+    "t1_name": "Natalia K.",
+    "t1_title": "VP Marketing",
+    "t2_quote": "From silent in meetings to confident speaker. This coaching is life-changing.",
+    "t2_name": "Alex M.",
+    "t2_title": "Software Engineer",
+    "t3_quote": "I closed a $2M deal in English after 3 months of coaching. Best investment ever.",
+    "t3_name": "Dmitry S.",
+    "t3_title": "Startup Founder"
+  },
+  "blog": {
+    "title": "Learn From Our Blog",
+    "subtitle": "Free insights on professional English, confidence, and global leadership",
+    "read": "Read Article",
+    "category1": "Business English",
+    "category2": "Interview Prep",
+    "category3": "Professional Communication",
+    "post1": "7 Phrases That Make You Sound Confident in Meetings",
+    "post2": "How to Nail Your English Job Interview",
+    "post3": "Business Email: 5 Templates That Actually Work"
+  },
+  "cta": {
+    "title": "Ready to Transform?",
+    "subtitle": "Join 500+ professionals who mastered professional English",
+    "button": "Book Your Discovery Session"
+  },
+  "footer": {
+    "tagline": "Expert English coaching for Russian-speaking professionals.",
+    "links_title": "Quick Links",
+    "legal_title": "Legal",
+    "contact_title": "Contact",
+    "terms": "Terms of Service",
+    "privacy": "Privacy Policy",
+    "refund": "Refund Policy",
+    "copy": "© 2026 English for Future Leaders. All rights reserved."
+  }
+}

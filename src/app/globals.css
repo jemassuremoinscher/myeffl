@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --navy: #003D7A;
+    --gold: #D4A574;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply text-gray-900 antialiased;
+  }
+
+  /* Foldable phone support */
+  @media (min-width: 344px) and (max-width: 428px) {
+    .container {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+  }
+}
+
+@layer utilities {
+  .text-navy { color: #003D7A; }
+  .bg-navy { background-color: #003D7A; }
+}
