@@ -16,10 +16,11 @@ export function generateStaticParams() {
 }
 
 export async function generateMetadata({
-  params: { locale },
+  params,
 }: {
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
+  const { locale } = await params;
   const titles: Record<string, string> = {
     en: "English for Future Leaders | Professional English Coaching",
     fr: "Anglais pour Les Leaders de Demain | Coaching Anglais Professionnel",
@@ -57,11 +58,12 @@ export async function generateMetadata({
 
 export default async function LocaleLayout({
   children,
-  params: { locale },
+  params,
 }: {
   children: React.ReactNode;
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 }) {
+  const { locale } = await params;
   if (!locales.includes(locale)) {
     notFound();
   }
