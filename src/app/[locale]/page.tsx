@@ -7,21 +7,24 @@ import PackagesPreview from "@/components/sections/PackagesPreview";
 import TestimonialsSection from "@/components/sections/TestimonialsSection";
 import BlogPreview from "@/components/sections/BlogPreview";
 import CTASection from "@/components/sections/CTASection";
+import JsonLd from "@/components/seo/JsonLd";
+import { organizationSchema, personSchema, faqSchemaEN, faqSchemaRU } from "@/components/seo/schemas";
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
 }
 
-export default async function HomePage({
-  params,
-}: {
-  params: Promise<{ locale: string }>;
-}) {
+export default async function HomePage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   setRequestLocale(locale);
 
+  const faqSchema = locale === "ru" ? faqSchemaRU : faqSchemaEN;
+
   return (
     <>
+      <JsonLd data={organizationSchema} />
+      <JsonLd data={personSchema} />
+      <JsonLd data={faqSchema} />
       <HeroSection />
       <TrustSection />
       <HowItWorks />
