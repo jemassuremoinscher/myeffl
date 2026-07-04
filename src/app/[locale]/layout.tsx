@@ -9,6 +9,7 @@ import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import StructuredData from "@/components/layout/StructuredData";
 import Analytics from "@/components/layout/Analytics";
+import TelegramButton from "@/components/layout/TelegramButton";
 
 const inter = Inter({ subsets: ["latin", "cyrillic"] });
 
@@ -73,6 +74,7 @@ export default async function LocaleLayout({ children, params }: { children: Rea
         <NextIntlClientProvider messages={messages}>
           <Navbar />
           <main>{children}</main>
+          <TelegramButton />
           <Footer />
         </NextIntlClientProvider>
       </body>
