@@ -1,9 +1,8 @@
 import Script from "next/script";
 
-export default function Analytics() {
-  const GA_ID = process.env.NEXT_PUBLIC_GA_ID;
-  if (!GA_ID) return null;
+const GA_ID = process.env.NEXT_PUBLIC_GA_ID ?? "G-KKYZRZB5LQ";
 
+export default function Analytics() {
   return (
     <>
       <Script
@@ -15,7 +14,10 @@ export default function Analytics() {
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
-          gtag('config', '${GA_ID}', { page_path: window.location.pathname });
+          gtag('config', '${GA_ID}', {
+            page_path: window.location.pathname,
+            anonymize_ip: true
+          });
         `}
       </Script>
     </>
