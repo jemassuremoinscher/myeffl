@@ -10,10 +10,10 @@ export default function HeroSection() {
   return (
     <section className="bg-cream overflow-hidden">
       <div className="container-xl">
-        <div className="grid lg:grid-cols-[1fr_380px] gap-10 lg:gap-16 items-stretch min-h-[88vh] py-16 lg:py-0">
+        <div className="grid lg:grid-cols-[1fr_380px] items-stretch">
 
-          {/* LEFT */}
-          <div className="flex flex-col justify-center py-16">
+          {/* LEFT — copy */}
+          <div className="flex flex-col justify-center py-16 lg:py-20 lg:pr-12">
             <p className="eyebrow mb-7">Professional English Coaching · Dubai · Online</p>
 
             <h1 className="text-[clamp(2.8rem,6vw,5rem)] font-black text-ink leading-[1.02] mb-8">
@@ -36,7 +36,7 @@ export default function HeroSection() {
               </Link>
             </div>
 
-            {/* Stats inline */}
+            {/* Stats */}
             <div className="flex flex-wrap gap-8 pt-8 border-t border-border">
               {[
                 { val:"500+",   lab:"Professionals coached" },
@@ -51,31 +51,29 @@ export default function HeroSection() {
             </div>
           </div>
 
-          {/* RIGHT — Kate photo, pleine hauteur */}
-          <div className="hidden lg:flex flex-col relative">
-            <div className="flex-1 bg-primary relative overflow-hidden">
-              {/* Photo de Kate */}
+          {/* RIGHT — Kate — hauteur FIXE indépendante du texte gauche */}
+          <div className="hidden lg:block relative" style={{ minHeight: "600px" }}>
+            {/* Photo container en position absolue = même cadrage toutes langues */}
+            <div className="absolute inset-0 bg-primary overflow-hidden">
               <Image
                 src="/kate.jpg"
                 alt="Katsiaryna — English Coach"
                 fill
-                className="object-cover object-[center_15%]"
+                className="object-cover"
+                style={{ objectPosition: "50% 20%" }}
                 priority
               />
-
-              {/* Overlay gradient bas */}
-              <div className="absolute inset-0 bg-gradient-to-t from-ink/80 via-ink/10 to-transparent"/>
-
-              {/* Credential strip */}
+              {/* Gradient bas */}
+              <div className="absolute inset-0 bg-gradient-to-t from-ink/75 via-ink/10 to-transparent"/>
+              {/* Strip credentials */}
               <div className="absolute bottom-0 left-0 right-0 px-6 py-5 z-10">
                 <p className="text-[10px] text-white/45 uppercase tracking-widest mb-1">Your coach</p>
                 <p className="text-on-dark font-bold text-sm">Katsiaryna · CELTA Certified · 10+ years</p>
                 <p className="text-white/50 text-xs mt-0.5">🇷🇺 Russian · 🇬🇧 English · 🇫🇷 French</p>
               </div>
             </div>
-
             {/* Gold accent */}
-            <div className="h-2 bg-gold flex-shrink-0"/>
+            <div className="absolute bottom-0 left-0 right-0 h-2 bg-gold z-20"/>
           </div>
 
         </div>
