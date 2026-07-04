@@ -1,60 +1,58 @@
-import { useTranslations } from "next-intl";
-import { Star } from "lucide-react";
-
-const testimonialKeys = ["t1","t2","t3"] as const;
+import { useTranslations, useLocale } from "next-intl";
+import Link from "next/link";
 
 export default function TestimonialsSection() {
   const t = useTranslations("testimonials");
+  const locale = useLocale();
+
+  const testimonials = [
+    { nameKey:"t1_name", titleKey:"t1_title", quoteKey:"t1_quote", result: locale==="ru"?"Повышение через 6 мес.":locale==="fr"?"Promotion en 6 mois":"Promoted in 6 months", initials:"NK" },
+    { nameKey:"t2_name", titleKey:"t2_title", quoteKey:"t2_quote", result: locale==="ru"?"Ведёт встречи на английском":locale==="fr"?"Anime des réunions en anglais":"Now leads English calls", initials:"AM" },
+    { nameKey:"t3_name", titleKey:"t3_title", quoteKey:"t3_quote", result: locale==="ru"?"Закрыл сделку на $2M":locale==="fr"?"Deal de 2M$ conclu":"Closed $2M deal in English", initials:"DS" },
+  ] as const;
 
   return (
-    <section className="section-pad bg-cream-dark">
+    <section className="bg-cream section-pad">
       <div className="container-xl">
-
-        <div className="mb-14">
+        <div className="mb-12">
           <p className="eyebrow mb-5">{t("title")}</p>
-          <h2 className="text-[clamp(2rem,3.5vw,3.2rem)] font-black text-ink max-w-[18ch]">
-            {t("subtitle")}
-          </h2>
+          <h2 className="text-[clamp(2rem,4vw,3rem)] font-black text-ink">{t("subtitle")}</h2>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-5">
-          {testimonialKeys.map((key, idx) => (
-            <div key={key}
-              className={`rounded-2xl p-7 flex flex-col gap-6 ${
-                idx === 0
-                  ? "bg-primary text-on-dark"
-                  : "bg-cream border border-border"
-              }`}>
-              {/* Stars */}
-              <div className="flex gap-1">
-                {[...Array(5)].map((_,i) => (
-                  <Star key={i} size={14} className="fill-gold text-gold"/>
-                ))}
+        <div className="grid md:grid-cols-3 gap-5 mb-12">
+          {testimonials.map((item) => (
+            <div key={item.nameKey} className="bg-cream-dark border border-border rounded-2xl p-7 flex flex-col">
+              {/* Result badge */}
+              <div className="inline-flex items-center gap-2 mb-5">
+                <span className="w-2 h-2 rounded-full bg-primary flex-shrink-0"/>
+                <span className="text-[11px] font-bold uppercase tracking-wider text-primary">{item.result}</span>
               </div>
 
               {/* Quote */}
-              <p className={`text-sm leading-[1.8] flex-1 ${idx===0 ? "text-white/80" : "text-ink-soft"}`}>
-                &ldquo;{t(`${key}_quote`)}&rdquo;
+              <p className="text-sm text-ink-soft leading-[1.85] flex-1 mb-6 italic">
+                "{t(item.quoteKey)}"
               </p>
 
               {/* Author */}
-              <div className="flex items-center gap-3 pt-4 border-t border-white/10">
-                <div className={`w-9 h-9 rounded-full flex items-center justify-center text-xs font-black flex-shrink-0 ${
-                  idx===0 ? "bg-white/20 text-on-dark" : "bg-primary text-on-dark"
-                }`}>
-                  {t(`${key}_name`).charAt(0)}
+              <div className="flex items-center gap-3 pt-5 border-t border-border">
+                <div className="w-9 h-9 rounded-full bg-primary flex items-center justify-center flex-shrink-0">
+                  <span className="text-[10px] font-black text-gold">{item.initials}</span>
                 </div>
                 <div>
-                  <p className={`text-sm font-bold ${idx===0 ? "text-on-dark" : "text-ink"}`}>
-                    {t(`${key}_name`)}
-                  </p>
-                  <p className={`text-xs ${idx===0 ? "text-white/45" : "text-muted"}`}>
-                    {t(`${key}_title`)}
-                  </p>
+                  <p className="font-bold text-ink text-sm">{t(item.nameKey)}</p>
+                  <p className="text-xs text-muted">{t(item.titleKey)}</p>
                 </div>
               </div>
             </div>
           ))}
+        </div>
+
+        {/* CTA sous les témoignages */}
+        <div className="text-center">
+          <Link href={`/${locale}/contact`}
+            className="inline-flex items-center gap-2 text-sm font-semibold text-primary border border-primary/30 px-6 py-3 rounded-xl hover:bg-primary hover:text-on-dark transition-colors">
+            {locale==="ru"?"Записаться на бесплатное занятие →":locale==="fr"?"Réserver une séance gratuite →":"Book your free session →"}
+          </Link>
         </div>
       </div>
     </section>

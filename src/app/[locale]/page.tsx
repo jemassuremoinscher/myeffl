@@ -4,6 +4,7 @@ import HeroSection from "@/components/sections/HeroSection";
 import TrustSection from "@/components/sections/TrustSection";
 import HowItWorks from "@/components/sections/HowItWorks";
 import PackagesPreview from "@/components/sections/PackagesPreview";
+import PullQuoteSection from "@/components/sections/PullQuoteSection";
 import WhitebookSection from "@/components/sections/WhitebookSection";
 import TestimonialsSection from "@/components/sections/TestimonialsSection";
 import BlogPreview from "@/components/sections/BlogPreview";
@@ -23,6 +24,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
       <TrustSection />
       <HowItWorks />
       <PackagesPreview />
+      <PullQuoteSection />
       <WhitebookSection />
       <TestimonialsSection />
       <BlogPreview />
