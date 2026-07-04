@@ -18,7 +18,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   return { title: titles[locale]??titles.en, description: descs[locale]??descs.en };
 }
 
-export const posts = [
+const posts = [
   {
     slug: "confident-in-meetings",
     category: { en: "Business English", fr: "Anglais des affaires", ru: "Деловой английский" },
