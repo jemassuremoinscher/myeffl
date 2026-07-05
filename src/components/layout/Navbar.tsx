@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useTranslations, useLocale } from "next-intl";
@@ -22,10 +23,8 @@ export default function Navbar() {
   return (
     <header className="sticky top-0 z-50 bg-cream/95 backdrop-blur-md border-b border-border">
       <div className="container-xl flex items-center justify-between h-[66px]">
-        <Link href={`/${locale}`} className="flex items-center gap-3">
-          <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center flex-shrink-0">
-            <span className="text-gold font-black text-sm">E</span>
-          </div>
+        <Link href={`/${locale}`} className="flex items-center gap-2.5">
+          <Image src="/logo-icon.png" alt="EFFL — English for Future Leaders" width={40} height={40} priority className="w-9 h-9 flex-shrink-0" />
           <div className="hidden sm:block leading-tight">
             <p className="text-[10px] font-black text-primary tracking-[0.22em] uppercase">EFFL</p>
             <p className="text-[9px] text-muted tracking-wide">English for Future Leaders</p>

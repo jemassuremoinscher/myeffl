@@ -29,7 +29,7 @@ export const organizationSchema = {
   name: "English for Future Leaders",
   alternateName: "EFFL",
   url: "https://myeffl.com",
-  logo: "https://myeffl.com/kate.jpg",
+  logo: "https://myeffl.com/logo-full.png",
   image: "https://myeffl.com/kate.jpg",
   description: "Professional English coaching for Russian-speaking executives, managers and entrepreneurs. 1-on-1 sessions online. CELTA-certified coach based in Dubai.",
   telephone: "",

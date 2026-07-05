@@ -1,4 +1,5 @@
 import { useTranslations, useLocale } from "next-intl";
+import Image from "next/image";
 import Link from "next/link";
 
 export default function Footer() {
@@ -12,9 +13,7 @@ export default function Footer() {
 
           <div className="sm:col-span-2">
             <div className="flex items-center gap-2.5 mb-5">
-              <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
-                <span className="text-gold font-black text-sm">E</span>
-              </div>
+              <Image src="/logo-icon-light.png" alt="EFFL — English for Future Leaders" width={36} height={36} className="w-9 h-9" />
               <span className="text-[10px] font-black tracking-[0.22em] uppercase text-white/60">EFFL</span>
             </div>
             <p className="text-sm text-white/30 leading-relaxed max-w-[28ch]">{t("tagline")}</p>

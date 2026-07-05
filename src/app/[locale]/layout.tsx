@@ -50,7 +50,7 @@ export default async function LocaleLayout({ children, params }: { children: Rea
     name:"English for Future Leaders",
     alternateName:"EFFL",
     url:"https://myeffl.com",
-    logo:"https://myeffl.com/kate.jpg",
+    logo:"https://myeffl.com/logo-full.png",
     description:"Expert business English coaching for Russian-speaking professionals. 1-on-1 sessions with a CELTA-certified coach based in Dubai.",
     address:{ "@type":"PostalAddress", addressLocality:"Dubai", addressCountry:"AE" },
     foundingDate:"2022",
